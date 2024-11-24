@@ -1,0 +1,22 @@
+name "coregraphics-d"
+description "D bindings for the Core Graphics API"
+authors "Inochi2D Project"
+copyright "Copyright © 2024, Inochi2D Project"
+license "BSD-2-Clause"
+
+dependency "corefoundation-d" version="~>1.0"
+dependency "objective-d" version="~>1.0" optional=true
+
+targetPath "out/"
+
+# Default configuration.
+configuration "static" {
+    platforms "osx" "ios" "tvos" "watchos" "visionos"
+    targetType "library"
+    lflags "-framework" "CoreGraphics"
+}
+
+# For platforms that don't support it.
+configuration "other_platforms" {
+    targetType "none"
+}
