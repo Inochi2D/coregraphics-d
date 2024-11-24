@@ -10,6 +10,7 @@
 */
 module coregraphics.cgpath;
 import coregraphics.cggeometry;
+import corefoundation;
 
 extern(C) @nogc nothrow:
 
@@ -175,4 +176,4 @@ struct CGPathElement {
 /**
     Creates a mutable graphics path.
 */
-extern CFMutablePathRef CGPathCreateMutable();
+extern CGMutablePathRef CGPathCreateMutable();

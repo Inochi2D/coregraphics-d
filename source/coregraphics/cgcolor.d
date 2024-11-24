@@ -10,9 +10,13 @@
 */
 module coregraphics.cgcolor;
 import coregraphics.cggeometry;
-import corefoundation;
+import coregraphics.cgpattern;
+import coregraphics.cgdata;
+
 import corefoundation.cfstring;
 import corefoundation.cfdictionary;
+import corefoundation.cfdata;
+import corefoundation;
 
 extern(C) @nogc nothrow:
 
@@ -367,7 +371,7 @@ extern size_t CGColorSpaceGetColorTableCount(CGColorSpaceRef space);
 /**
     Copies the entries in the color table of an indexed color space. 
 */
-extern void CGColorSpaceGetColorTable(CGColorSpaceRef space, uint8_t *table);
+extern void CGColorSpaceGetColorTable(CGColorSpaceRef space, ubyte* table);
 
 /**
     Returns the name used to create the specified color space.

@@ -10,6 +10,7 @@
 */
 module coregraphics.cgfont;
 import coregraphics.cggeometry;
+import coregraphics.cgdata;
 import corefoundation;
 import corefoundation.cfdictionary;
 import corefoundation.cfdata;

@@ -6,15 +6,15 @@
 */
 
 /**
-    CGPattern
+    CGImage
 */
-module coregraphics.cgpattern;
+module coregraphics.cgimage;
 import coregraphics.cggeometry;
 import corefoundation;
 
 extern(C) @nogc nothrow:
 
 /**
-    An abstraction for data-reading tasks that eliminates the need to manage a raw memory buffer.
+    A bitmap image or image mask.
 */
-alias CGPatternRef = CFTypeRef;
+alias CGImageRef = CFTypeRef;

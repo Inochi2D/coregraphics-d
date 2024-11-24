@@ -13,10 +13,14 @@ import coregraphics.cggeometry;
 import coregraphics.cgcolor;
 import coregraphics.cgfont;
 import coregraphics.cgfunction;
+import coregraphics.cgpath;
+import coregraphics.cgpdf;
 import coregraphics.cgshading;
 import coregraphics.cgpattern;
-import corefoundation;
+import coregraphics.cggradient;
+import coregraphics.cgimage;
 import corefoundation.cfdictionary;
+import corefoundation;
 
 extern(C) @nogc nothrow:
 

@@ -18,12 +18,12 @@ extern(C) @nogc nothrow:
 /**
     Performs custom operations on the supplied input data to produce output data.
 */
-alias CGFunctionEvaluateCallback = extern(C) void(void* info, const(CGFloat)* in_, CGFloat* out_);
+alias CGFunctionEvaluateCallback = extern(C) void function(void* info, const(CGFloat)* in_, CGFloat* out_);
 
 /**
     Performs custom clean-up tasks when Core Graphics deallocates a CGFunctionRef object.
 */
-alias CGFunctionReleaseInfoCallback = extern(C) void(void* info);
+alias CGFunctionReleaseInfoCallback = extern(C) void function(void* info);
 
 /**
     A structure that contains callbacks needed by a CGFunctionRef object.

@@ -10,6 +10,7 @@
 */
 module coregraphics.cgdata;
 import coregraphics.cggeometry;
+import corefoundation;
 
 extern(C) @nogc nothrow:
 

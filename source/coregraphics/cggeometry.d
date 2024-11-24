@@ -193,8 +193,8 @@ struct CGAffineTransform {
     */
     CGPoint apply(CGPoint point) {
         CGPoint p;
-        p.x  = cast(CGFloat)(cast(double)this.a * point.x + cast(double)this.c * point.y + t.tx);
-        p.y  = cast(CGFloat)(cast(double)this.b * point.x + cast(double)this.d * point.y + t.ty);
+        p.x  = cast(CGFloat)(cast(double)this.a * point.x + cast(double)this.c * point.y + this.tx);
+        p.y  = cast(CGFloat)(cast(double)this.b * point.x + cast(double)this.d * point.y + this.ty);
         return p;
     }
 
