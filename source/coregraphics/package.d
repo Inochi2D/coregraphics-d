@@ -6,4 +6,6 @@
     Authors:   Luna Nielsen
 */
 module coregraphics;
+
 public import corefoundation;
+public import coregraphics.cggeometry;

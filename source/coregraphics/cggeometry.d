@@ -8,7 +8,6 @@
 module coregraphics.cggeometry;
 import core.stdc.math : cos, sin;
 
-
 /**
     The basic type for all floating-point values.
 */
