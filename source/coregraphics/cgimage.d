@@ -1,12 +1,9 @@
-/*
-    Copyright © 2024, Inochi2D Project
-    Distributed under the 2-Clause BSD License, see LICENSE file.
-    
-    Authors: Luna Nielsen
-*/
-
 /**
     CGImage
+
+    Copyright: Copyright © 2025, Kitsunebi Games EMV
+    License:   $(LINK2 http://www.boost.org/LICENSE_1_0.txt, Boost License 1.0)
+    Authors:   Luna Nielsen
 */
 module coregraphics.cgimage;
 import coregraphics.cggeometry;

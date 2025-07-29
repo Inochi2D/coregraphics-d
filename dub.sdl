@@ -4,8 +4,7 @@ authors "Inochi2D Project"
 copyright "Copyright © 2024, Inochi2D Project"
 license "BSD-2-Clause"
 
-dependency "corefoundation-d" version="~>1.0"
-dependency "objective-d" version="~>1.0"
+dependency "objective-d" version=">=1.1.0"
 
 targetPath "out/"
 
@@ -13,7 +12,7 @@ targetPath "out/"
 configuration "static" {
     platforms "osx" "ios" "tvos" "watchos" "visionos"
     targetType "library"
-    lflags "-framework" "CoreGraphics"
+    lflags "-framework" "CoreGraphics" "-framework" "OpenGL"
 }
 
 # For platforms that don't support it.
