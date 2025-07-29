@@ -11,14 +11,14 @@ import corefoundation;
 
 extern(C) @nogc nothrow:
 
-alias CGPDFArrayRef              = CFTypeRef;
-alias CGPDFContentStreamRef      = CFTypeRef;
-alias CGPDFContextRef            = CFTypeRef;
-alias CGPDFDictionaryRef         = CFTypeRef;
-alias CGPDFObjectRef             = CFTypeRef;
-alias CGPDFOperatorTableRef      = CFTypeRef;
-alias CGPDFPageRef               = CFTypeRef;
-alias CGPDFScannerRef            = CFTypeRef;
-alias CGPDFStreamRef             = CFTypeRef;
-alias CGPDFStringRef             = CFTypeRef;
-alias CGPSConverterRef           = CFTypeRef;
+alias CGPDFArrayRef              = CFSubType!("CGPDFArray");
+alias CGPDFContentStreamRef      = CFSubType!("CGPDFContentStream");
+alias CGPDFContextRef            = CFSubType!("CGPDFContext");
+alias CGPDFDictionaryRef         = CFSubType!("CGPDFDictionary");
+alias CGPDFObjectRef             = CFSubType!("CGPDFObject");
+alias CGPDFOperatorTableRef      = CFSubType!("CGPDFOperatorTable");
+alias CGPDFPageRef               = CFSubType!("CGPDFPage");
+alias CGPDFScannerRef            = CFSubType!("CGPDFScanner");
+alias CGPDFStreamRef             = CFSubType!("CGPDFStream");
+alias CGPDFStringRef             = CFSubType!("CGPDFString");
+alias CGPSConverterRef           = CFSubType!("CGPSConverter");

@@ -83,7 +83,7 @@ enum CGTextDrawingMode {
 /**
     A Quartz 2D drawing destination.
 */
-alias CGContextRef = CFTypeRef;
+alias CGContextRef = CFSubType!("CGContext");
 
 /**
     Returns the type identifier for a graphics context.

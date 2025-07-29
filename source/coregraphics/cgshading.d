@@ -19,7 +19,7 @@ extern(C) @nogc nothrow:
     controlled by a custom function you provide, 
     for drawing radial and axial gradient fills.
 */
-alias CGShadingRef = CFTypeRef;
+alias CGShadingRef = CFSubType!("CGShading");
 
 /**
     Returns the Core Foundation type identifier for Core Graphics shading objects.

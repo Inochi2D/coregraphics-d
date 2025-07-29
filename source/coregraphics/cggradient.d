@@ -34,4 +34,4 @@ enum CGGradientDrawingOptions : uint {
 /**
     A definition for a smooth transition between colors for drawing radial and axial gradient fills.
 */
-alias CGGradientRef = CFTypeRef;
+alias CGGradientRef = CFSubType!("CGGradient");

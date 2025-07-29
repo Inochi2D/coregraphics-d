@@ -14,9 +14,9 @@ extern(C) @nogc nothrow:
 /**
     An abstraction for data-reading tasks that eliminates the need to manage a raw memory buffer.
 */
-alias CGDataProviderRef = CFTypeRef;
+alias CGDataProviderRef = CFSubType!("CGDataProvider");
 
 /**
     An abstraction for data-writing tasks that eliminates the need to manage a raw memory buffer.
 */
-alias CGDataConsumerRef = CFTypeRef;
+alias CGDataConsumerRef = CFSubType!("CGDataConsumer");

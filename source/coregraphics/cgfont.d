@@ -42,7 +42,7 @@ enum CGFontPostScriptFormat : int {
 /**
     A set of character glyphs and layout information for drawing text.
 */
-alias CGFontRef = CFTypeRef;
+alias CGFontRef = CFSubType!("CGFont");
 
 /**
     An index into a font table.

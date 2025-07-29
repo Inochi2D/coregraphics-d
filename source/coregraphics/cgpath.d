@@ -14,12 +14,12 @@ extern(C) @nogc nothrow:
 /**
     An immutable path
 */
-alias CGPathRef = CFTypeRef;
+alias CGPathRef = CFSubType!("CGPath");
 
 /**
     An mutable path
 */
-alias CGMutablePathRef = CFTypeRef;
+alias CGMutablePathRef = CFSubType!("CGMutablePath");
 
 /**
     Styles for rendering the endpoint of a stroked line.

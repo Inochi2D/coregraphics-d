@@ -14,4 +14,4 @@ extern(C) @nogc nothrow:
 /**
     A bitmap image or image mask.
 */
-alias CGImageRef = CFTypeRef;
+alias CGImageRef = CFSubType!("CGImage");

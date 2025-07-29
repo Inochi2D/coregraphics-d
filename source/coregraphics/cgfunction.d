@@ -48,7 +48,7 @@ struct CGFunctionCallbacks {
 /**
     A general facility for defining and using callback functions.
 */
-alias CGFunctionRef = CFTypeRef;
+alias CGFunctionRef = CFSubType!("CGFunction");
 
 /**
     Returns the type identifier for Core Graphics function objects.

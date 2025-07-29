@@ -14,4 +14,4 @@ extern(C) @nogc nothrow:
 /**
     An abstraction for data-reading tasks that eliminates the need to manage a raw memory buffer.
 */
-alias CGPatternRef = CFTypeRef;
+alias CGPatternRef = CFSubType!("CGPattern");

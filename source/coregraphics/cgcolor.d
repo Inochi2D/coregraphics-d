@@ -20,7 +20,7 @@ extern(C) @nogc nothrow:
 /**
     A set of components that define a color, with a color space specifying how to interpret them.
 */
-alias CGColorRef = CFTypeRef;
+alias CGColorRef = CFSubType!("CGColor");
 
 /**
     Returns the Core Foundation type identifier for a color data type.
@@ -147,7 +147,7 @@ enum CGColorConversionInfoTransformType : uint {
 /**
     An object that describes how to convert between color spaces for use by other system services. 
 */
-alias CGColorConversionInfoRef = CFTypeRef;
+alias CGColorConversionInfoRef = CFSubType!("CGColorConversionInfo");
 
 /**
     Returns the Core Foundation type identifier for a color conversion info data type.
@@ -263,7 +263,7 @@ enum CGColorRenderingIntent : int {
 /**
     A profile that specifies how to interpret a color value for display.
 */
-alias CGColorSpaceRef = CFTypeRef;
+alias CGColorSpaceRef = CFSubType!("CGColorSpace");
 
 /**
     Returns the Core Foundation type identifier for Quartz color spaces.
