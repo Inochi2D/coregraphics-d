@@ -12,7 +12,7 @@ targetPath "out/"
 configuration "static" {
     platforms "osx" "ios" "tvos" "watchos" "visionos"
     targetType "library"
-    lflags "-framework" "CoreGraphics" "-framework" "OpenGL"
+    lflags "-framework" "CoreGraphics" "-framework" "OpenGL" "-framework" "IOSurface"
 }
 
 # For platforms that don't support it.
