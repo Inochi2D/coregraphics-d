@@ -79,71 +79,187 @@ extern CGColorRef CGColorCreate(CGColorSpaceRef space, const(CGFloat)* component
 extern CGColorRef CGColorGetConstantColor(CFStringRef colorName);
 
 /**
-    Creates a copy of an existing color.
-*/
-extern CGColorRef CGColorCreateCopy(CGColorRef color);
-
-/**
     Creates a color in the Generic gray color space.
+
+    Params:
+        gray =  The gray value
+        alpha = The alpha mask value.
+    
+    Returns:
+        A new color object on success,
+        $(D null) on failure.
 */
 extern CGColorRef CGColorCreateGenericGray(CGFloat gray, CGFloat alpha);
 
 /**
     Creates a color in the Generic RGB color space.
+
+    Params:
+        red =   The red value
+        green = The green value
+        blue =  The blue value
+        alpha = The alpha mask value.
+    
+    Returns:
+        A new color object on success,
+        $(D null) on failure.
 */
 extern CGColorRef CGColorCreateGenericRGB(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
 
 /**
     Creates a color in the sRGB color space.
+
+    Params:
+        red =   The red value
+        green = The green value
+        blue =  The blue value
+        alpha = The alpha mask value.
+    
+    Returns:
+        A new color object on success,
+        $(D null) on failure.
 */
 extern CGColorRef CGColorCreateSRGB(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
 
 /**
     Creates a color in the Generic CMYK color space.
+
+    Params:
+        cyan =      The cyan color value
+        magenta =   The magenta color value
+        yellow =    The yellow color value
+        key =       The key (black) color value    
+        alpha =     The alpha mask value.
+
+    Returns:
+        A new color object on success,
+        $(D null) on failure.
 */
 extern CGColorRef CGColorCreateGenericCMYK(CGFloat cyan, CGFloat magenta, CGFloat yellow, CGFloat black, CGFloat alpha);
 
 /**
-    Creates a copy of an existing color, substituting a new alpha value.
-*/
-extern CGColorRef CGColorCreateCopyWithAlpha(CGColorRef color, CGFloat alpha);
+    Creates a color using a list of intensity values 
+    (including alpha), a pattern color space, and a 
+    pattern.
 
-/**
-    Creates a color using a list of intensity values (including alpha), a pattern color space, and a pattern.
+    Params:
+        space =         The pattern colorspace.
+        pattern =       The pattern.
+        components =    Slice containing intensity values.
+    
+    Returns:
+        A copy of the given color object.
 */
 extern CGColorRef CGColorCreateWithPattern(CGColorSpaceRef space, CGPatternRef pattern, const(CGFloat)* components);
 
 /**
-    Creates a new color in a different color space that matches the provided color.
+    Creates a copy of an existing color.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        A copy of the given color object.
+*/
+extern CGColorRef CGColorCreateCopy(CGColorRef color);
+
+/**
+    Creates a copy of an existing color, substituting 
+    a new alpha value.
+
+    Params:
+        color = The color object.
+        alpha = The alpha mask value.
+    
+    Returns:
+        A copy of the given color object.
+*/
+extern CGColorRef CGColorCreateCopyWithAlpha(CGColorRef color, CGFloat alpha);
+
+/**
+    Creates a new color in a different color space that 
+    matches the provided color.
+
+    Params:
+        space = The colorspace to match against.
+        intent = The rendering intent.
+        color = The color to base the copy of.
+        options = Options for the copy.
+    
+    Returns:
+        A copy of the given color object.
 */
 extern CGColorRef CGColorCreateCopyByMatchingToColorSpace(CGColorSpaceRef space, CGColorRenderingIntent intent, CGColorRef color, CFDictionaryRef options);
 
 /**
     Indicates whether two colors are equal.
+
+    Params:
+        color1 = First color
+        color2 = Second color.
+
+    Returns:
+        $(D true) if the colors are equal,
+        $(D false) otherwise.
 */
 extern bool CGColorEqualToColor(CGColorRef color1, CGColorRef color2);
 
 /**
-    Returns the value of the alpha component associated with a color.
+    Returns the value of the alpha component 
+    associated with a color.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        The alpha component of the color.
 */
 extern CGFloat CGColorGetAlpha(CGColorRef color);
 
 /**
     Returns the color space associated with a color.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        The color space of the color.
 */
 extern CGColorSpaceRef CGColorGetColorSpace(CGColorRef color);
 
 /**
-    Returns the values of the color components (including alpha) associated with a color.
+    Returns the values of the color components 
+    (including alpha) associated with a color.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        A pointer to a series of floating point numbers,
+        length is determined by the color space.
 */
 extern const(CGFloat)* CGColorGetComponents(CGColorRef color);
 
 /**
-    Returns the number of color components (including alpha) associated with a color.
+    Returns the number of color components 
+    (including alpha) associated with a color.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        The number of color components in the color.
 */
 extern size_t CGColorGetNumberOfComponents(CGColorRef color);
 
 /**
-    Returns the pattern associated with a color in a pattern color space.
+    Returns the pattern associated with a 
+    color in a pattern color space.
+
+    Params:
+        color = The color object.
+    
+    Returns:
+        The pattern associated with the color.
 */
 extern CGPatternRef CGColorGetPattern(CGColorRef color);
