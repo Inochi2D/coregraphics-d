@@ -118,7 +118,8 @@ enum : CGLContextEnable {
 //
 //              GPURestartStatus names
 //
-enum CGLGPURestartStatus { /* GPU Restart Status */
+alias CGLGPURestartStatus = uint;
+enum : CGLGPURestartStatus { /* GPU Restart Status */
     kCGLCPGPURestartStatusNone = 0, /* current context has not caused recent GPU restart */
     kCGLCPGPURestartStatusCaused = 1, /* current context caused recent GPU restart (auto-clear on query) */
     kCGLCPGPURestartStatusBlacklisted = 2, /* current context is being ignored for excessive GPU restarts (won't clear on query) */
@@ -171,7 +172,8 @@ enum uint kCGLCPContextPriorityRequestHigh = 0,
     kCGLCPContextPriorityRequestNormal = 1,
     kCGLCPContextPriorityRequestLow = 2;
 
-enum CGLGlobalOption {
+alias CGLGlobalOption = uint;
+enum : CGLGlobalOption {
     kCGLGOFormatCacheSize = 501, /* Set the size of the pixel format cache        */
     kCGLGOClearFormatCache = 502, /* Reset the pixel format cache if true          */
     kCGLGORetainRenderers = 503, /* Whether to retain loaded renderers in memory  */
@@ -181,7 +183,8 @@ enum CGLGlobalOption {
     kCGLGOUseErrorHandler = 505,
 }
 
-enum CGLOpenGLProfile : uint {
+alias CGLOpenGLProfile = uint;
+enum : CGLOpenGLProfile {
     kCGLOGLPVersion_Legacy = 0x1000, /* choose a renderer compatible with GL1.0       */
     kCGLOGLPVersion_3_2_Core = 0x3200, /* choose a renderer capable of GL3.2 or later   */
     kCGLOGLPVersion_GL3_Core = 0x3200, /* choose a renderer capable of GL3.2 or later   */
