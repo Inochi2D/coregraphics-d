@@ -11,7 +11,7 @@ targetPath "out/"
 # Default configuration.
 configuration "static" {
     platforms "osx" "ios" "tvos" "watchos" "visionos"
-    targetType "sourceLibrary"
+    targetType "library"
     
     lflags "-framework" "CoreGraphics" "-framework" "OpenGL" "-framework" "IOSurface"
 }
