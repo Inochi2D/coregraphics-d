@@ -6,6 +6,8 @@ license "BSD-2-Clause"
 
 dependency "objective-d" version=">=1.1.0"
 
+buildRequirements "allowWarnings"
+
 targetPath "out/"
 
 # Default configuration.
